@@ -32,34 +32,44 @@ const volvoAr = 2000
 
 const hozzaad = (value, list) => {
     list.push(value)
+    display()
 }
 
 const buy = () => {
     let temp = merci.length * merciAr + audi.length * audiAr + bmw.length * bmwAr + skoda.length * skodaAr + ford.length * fordAr + ferrari.length * ferrariAr + porsche.length * porscheAr + fiat.length * fiatAr + dodge.length * dodgeAr + camaro.length * camaroAr + aston.length * astonAr + volvo.length * volvoAr;
     let value = money - temp
     if (value <= 0) {
-        alert("nincs elég pénzed, módosíts a kosár tartalmán")
+        alert("Nincs elég pénzed, kérlek módosíts a kosár tartalmán!")
     } else {
         alert(value + " Ft-od maradt")
     }
 }
-/*
-let kosar = document.getElementById("cart")
-let bolt = document.getElementById("container")
+const writeout = () => {
+    document.getElementById("merci-print").innerHTML = "Neked " + merci.length + " Mercedesed van.";
+    document.getElementById("audi-print").innerHTML = "Neked " + audi.length + " Audid van.";
+    document.getElementById("bmw-print").innerHTML = "Neked " + bmw.length + " BMW-d van.";
+    document.getElementById("ford-print").innerHTML = "Neked " + ford.length + " Fordod van.";
+    document.getElementById("ferrari-print").innerHTML = "Neked " + ferrari.length + " Ferrarid van.";
+    document.getElementById("porsche-print").innerHTML = "Neked " + porsche.length + " Porschéd van.";
+    document.getElementById("fiat-print").innerHTML = "Neked " + fiat.length + " Fiatod van.";
+    document.getElementById("dodge-print").innerHTML = "Neked " + dodge.length + " Dodgeod van.";
+    document.getElementById("aston-print").innerHTML = "Neked " + aston.length + " Aston Martinod van.";
+}
+const display = () => {
+    writeout()
 
-const chkosar = () => {
-    document.getElementById("container").style.display = "none";
-    document.getElementById("cart").style.display = "flex";
 }
 
-const chbolt = () => {
-    document.getElementById("container").style.display = "grid"
-    document.getElementById("cart").style.display = "none"
-}*/
+const remove = (list) => {
+    list.pop()
+    display()
+
+}
 
 function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
+    display()
 }
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";

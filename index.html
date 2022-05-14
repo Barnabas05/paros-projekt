@@ -6,48 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ató Shop</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    
-    <header>
-        
+    <header class="fejlec">
+        <div class="nav-bar">
+            <div class="nav-item">Ató Shopp</div>
+            <div class="nav-item1" onclick="openNav()"><i class="fa fa-shopping-cart"></i></div>
+        </div>
     </header><div id="main">
     <main>
-        <div id="kosar" onclick="openNav()">kosar</div>
         <div id="container">
-            <div id="item1" class="items" onclick="hozzaad(1 , merci)"><img src="img/mercedes-benz-logo-png-transparent-mercedes-benz-logo-vector-11563000960vssrfbiuqu.png" alt=""></div>
-            <div id="item2" class="items" onclick="hozzaad(1, audi)"><img src="img/Audi-logo-icon-on-transparent-background-PNG.png" alt=""></div>
-            <div id="item3" class="items" onclick="hozzaad(1, bmw)"><img src="img/24-242586_bmw-logo-png-transparent-amp-svg-vector-bmw.png" alt=""></div>
-            <div id="item4" class="items" onclick="hozzaad(1, skoda)"><img src="img/png-clipart-Škoda-auto-Škoda-superb-car-Škoda-kodiaq-skoda-text-logo.png" alt=""></div>
-            <div id="item5" class="items" onclick="hozzaad(1, ford)"><img src="img/png-transparent-ford-motor-company-car-2000-ford-explorer-ford-escape-ford-emblem-logo-car.png" alt=""></div>
-            <div id="item6" class="items" onclick="hozzaad(1, ferrari)"><img src="img/ferrari-logo-transparent-httpsthequizy-755700.png" alt=""></div>
-            <div id="item7" class="items" onclick="hozzaad(1, porsche)"><img src="img/png-clipart-porsche-911-car-desktop-logo-porsche-emblem-label.png" alt=""></div>
-            <div id="item8" class="items" onclick="hozzaad(1, fiat)"><img src="img/png-transparent-fiat-automobiles-car-fiat-stilo-fiat-doblo-fiat-emblem-trademark-logo-thumbnail.png" alt=""></div>
-            <div id="item9" class="items" onclick="hozzaad(1, dodge)"><img src="img/png-transparent-dodge-ram-trucks-ram-pickup-car-chrysler-dodge-love-text-heart.png" alt=""></div>
-            <div id="item10" class="items" onclick="hozzaad(1, camaro)"><img src="img/png-transparent-general-motors-2018-chevrolet-camaro-2016-chevrolet-camaro-1994-chevrolet-camaro-camaro-angle-text-logo.png" alt=""></div>
-            <div id="item11" class="items" onclick="hozzaad(1, aston)"><img src="img/126-1262873_car-logo-aston-martin-aston-martin-logo-png.png" alt=""></div>
-            <div id="item12" class="items" onclick="hozzaad(1, volvo)"><img src="img/logo-volvo-construction-equipment-11562947920tktyeeusqi.png" alt=""></div>
+            <div class="hatter" id="item1"  onclick="hozzaad(1 , merci)"><img src="img/mercedes-benz-logo-png-transparent-mercedes-benz-logo-vector-11563000960vssrfbiuqu.png" alt=""></div>
+            <div class="hatter" id="item2" onclick="hozzaad(1, audi)"><img src="img/Audi-logo-icon-on-transparent-background-PNG.png" alt=""></div>
+            <div class="hatter" id="item3" onclick="hozzaad(1, bmw)"><img src="img/24-242586_bmw-logo-png-transparent-amp-svg-vector-bmw.png" alt=""></div>
+            <div class="hatter" id="item4" onclick="hozzaad(1, ford)"><img src="img/png-transparent-ford-motor-company-car-2000-ford-explorer-ford-escape-ford-emblem-logo-car.png" alt=""></div>
+            <div class="hatter" id="item5" onclick="hozzaad(1, ferrari)"><img src="img/ferrari-logo-transparent-httpsthequizy-755700.png" alt=""></div>
+            <div class="hatter" id="item6" onclick="hozzaad(1, porsche)"><img src="img/png-clipart-porsche-911-car-desktop-logo-porsche-emblem-label.png" alt=""></div>
+            <div class="hatter" id="item7" onclick="hozzaad(1, fiat)"><img src="img/png-transparent-fiat-automobiles-car-fiat-stilo-fiat-doblo-fiat-emblem-trademark-logo-thumbnail.png" alt=""></div>
+            <div class="hatter" id="item8" onclick="hozzaad(1, dodge)"><img src="img/png-transparent-dodge-ram-trucks-ram-pickup-car-chrysler-dodge-love-text-heart.png" alt=""></div>
+            <div class="hatter" id="item9" onclick="hozzaad(1, aston)"><img src="img/126-1262873_car-logo-aston-martin-aston-martin-logo-png.png" alt=""></div>
         </div>
         <div id="mySidebar" class="sidebar">
-            <a href="" class="closebtn" onclick="closeNav()">×</a>
-            
-          </div>
-
-        <!--<div id="cart">
-            <div id="buy" onclick="buy()"></div>
-        </div> -->
-    </main></div>
+            <button class="closebtn" onclick="closeNav()">x</button>
+                <div class="print">
+                <div id="merci-print"></div><button onclick="remove(merci)">DEL</button>
+                <div id="audi-print"></div><button onclick="remove(audi)">DEL</button>
+                <div id="bmw-print"></div><button onclick="remove(bmw)">DEL</button>
+                <div id="ford-print"></div><button onclick="remove(ford)">DEL</button>
+                <div id="ferrari-print"></div><button onclick="remove(ferrari)">DEL</button>
+                <div id="porsche-print"></div><button onclick="remove(porsche)">DEL</button>
+                <div id="fiat-print"></div><button onclick="remove(fiat)">DEL</button>
+                <div id="dodge-print"></div><button onclick="remove(dodge)">DEL</button>
+                <div id="aston-print"></div><button onclick="remove(aston)">DEL</button>
+            </div>
+            <div id="buy" onclick="buy()">Vásárlás</div>
+        </div>
+    </main>
+</div>
     <footer>
-        © Blankuci and Brown
+       © Blankuci and Brown
     </footer>
-
 </body>
 </html>
-
-
-  
- 
-    
-
-  
