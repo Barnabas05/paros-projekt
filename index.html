@@ -9,9 +9,10 @@
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="egyenleg()">
     <header class="fejlec">
         <div class="nav-bar">
+            <div id="money"></div>
             <div class="nav-item">Ató Shopp</div>
             <div class="nav-item1" onclick="openNav()"><i class="fa fa-shopping-cart"></i></div>
         </div>
@@ -40,7 +41,6 @@
                 <div id="fiat-print"></div><button onclick="remove(fiat)">Törlés</button>
                 <div id="dodge-print"></div><button onclick="remove(dodge)">Törlés</button>
                 <div id="aston-print"></div><button onclick="remove(aston)">Törlés</button>
-                
             </div>
             <div id="buy" onclick="buy()">Vásárlás</div>
         </div>

@@ -37,13 +37,33 @@ const hozzaad = (value, list) => {
 
 const buy = () => {
     let temp = merci.length * merciAr + audi.length * audiAr + bmw.length * bmwAr + skoda.length * skodaAr + ford.length * fordAr + ferrari.length * ferrariAr + porsche.length * porscheAr + fiat.length * fiatAr + dodge.length * dodgeAr + camaro.length * camaroAr + aston.length * astonAr + volvo.length * volvoAr;
-    let value = money - temp
-    if (value <= 0) {
+    money = money - temp
+    if (money <= 0) {
         alert("Nincs elég pénzed, kérlek módosíts a kosár tartalmán!")
+        egyenleg()
+
     } else {
-        alert(value + " Ft-od maradt")
+        alert("siekres vásárlás " + temp + "-t költöttél")
+        merci = []
+        audi = []
+        bmw = []
+        skoda = []
+        ford = []
+        ferrari = []
+        porsche = []
+        fiat = []
+        dodge = []
+        camaro = []
+        aston = []
+        volvo = []
+        egyenleg()
+        display()
     }
 }
+const egyenleg = () => {
+    document.getElementById("money").innerHTML = "egyenleg:" + money
+}
+
 const writeout = () => {
     document.getElementById("merci-print").innerHTML = "Neked " + merci.length + " Mercedesed van. (2000Ft/db)";
     document.getElementById("audi-print").innerHTML = "Neked " + audi.length + " Audid van. (2000Ft/db)";
