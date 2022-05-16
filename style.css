@@ -108,7 +108,6 @@ footer{
     display: block;
     transition: 0.3s;
 }
-  
 .sidebar a:hover {
     color: #f1f1f1;
 }
@@ -138,11 +137,9 @@ footer{
 div.print>div{
   margin-bottom: 10px;
 }
-
 .print{
   margin-bottom: 60px;
 }
-
 .nav-bar{
   display: grid;
   grid-template-columns: repeat(3 , calc(100%/3)) ;
